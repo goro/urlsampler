@@ -1,0 +1,3 @@
+<li>
+  <div ng-class="{ 'active': sample.loaded }" class="light"></div><input type="text" class="sample-name" ng-model="sample.name" /><a class="open-ended" ng-class="{ active: !sample.openEnded }" title="Stop sound on release" ng-click="sample.openEnded = !sample.openEnded"><span class="line"></span><span class="arrow"></span><span class="barrier"></span></a><input type="text" class="sample-url" ng-model="sample.url" ng-blur="formatAndPreloadSample()" />
+</li>

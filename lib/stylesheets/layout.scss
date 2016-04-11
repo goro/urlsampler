@@ -1,0 +1,79 @@
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #222;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 16px 'Michroma', sans-serif;
+  background: #000 url("/images/bg.jpg") no-repeat;
+  background-size: cover;
+  color: #333;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input {
+  font: 12px 'Michroma', sans-serif;
+  text-overflow: ellipsis;
+}
+
+div.box {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin: auto 5px;
+  margin-top: -332px;
+  margin-left: -570px;
+  padding: 20px;
+  background: #333;
+  width: 1080px;
+  height: 604px;
+  border-radius: 8px;
+  border-bottom: 20px solid #555;
+}
+
+header {
+  height: 50px;
+  position: relative;
+}
+
+h1 {
+  color: #FFF;
+  position: relative;
+  line-height: 1;
+  top: -2px;
+}
+
+h1 span {
+  opacity: 0.5;
+}
+
+div.clear {
+  clear: both;
+}

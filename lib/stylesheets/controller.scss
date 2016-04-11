@@ -1,0 +1,86 @@
+ul.controller {
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  text-align: right;
+}
+
+ul.controller li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+  height: 34px;
+}
+
+ul.controller li a {
+  display: inline-block;
+  box-shadow: 0 1px 5px #222;
+  height: 34px;
+  background-color: #444;
+  border-radius: 0 0 2px 2px;
+}
+
+ul.controller a:active,
+ul.controller a.active {
+  position: relative;
+  top: 4px;
+  height: 30px;
+}
+
+ul.controller a span.button-inner {
+  height: 30px;
+  width: 50px;
+  color: #FFF;
+  display: inline-block;
+  background-color: #f9f6d2;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 200ms ease-out;
+  box-shadow: inset 0 0 5px #a88b09;
+}
+
+ul.controller a:active span.button-inner,
+ul.controller a.active span.button-inner {
+  background-color: #fcfbeb;
+}
+
+ul.controller a.record-button span.button-inner {
+  background-color: #ff1800;
+  box-shadow: inset 0 0 5px #FFF;
+  position: relative;
+}
+
+ul.controller a.record-button:active span.button-inner,
+ul.controller a.record-button.active span.button-inner {
+  background-color: #ff4200;
+}
+
+a.record-button span.button-inner {
+  line-height: 30px;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+a.play-button span.icon {
+  height: 0;
+  width: 0;
+  border: 6px solid transparent;
+  border-left: 12px solid #27696B;
+  border-right: 0;
+  display: block;
+  margin-top: 9px;
+  margin-left: 20px;
+}
+
+a.stop-button span.icon {
+  margin-top: 10px;
+  margin-left: 20px;
+  height: 10px;
+  width: 10px;
+  display: block;
+  background-color: #27696B;
+}

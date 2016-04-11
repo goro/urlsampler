@@ -1,0 +1,5 @@
+<li ng-class="{ active: sample.active }">
+  <a title="{{ sample.name }}" ng-click="pressedKey($event)" tabIndex="{{ tabIndex }}" ng-class="{ inactive: (!sample.url || !sample.loaded) }">
+    {{ sample.key }}
+  </a>
+</li>

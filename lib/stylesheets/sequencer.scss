@@ -1,0 +1,127 @@
+div.sequencer-container {
+  background-color: #2a2a2a;
+  padding: 10px;
+  border: 1px solid #3a3a3a;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+div.sequencer-container {
+  div.note-editor {
+    clear: both;
+    padding-top: 10px;
+    text-align: center;
+    opacity: 0.5;
+
+    &.active {
+      opacity: 1;
+    }
+
+    label {
+      color: #FFF;
+      font-size: 12px;
+      margin-right: 30px;
+      display: inline-block;
+    }
+
+    input[type="text"] {
+      margin-left: 10px;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 5px;
+      outline: 0;
+      border: 0;
+
+      &.short {
+        width: 80px;
+      }
+    }
+  }
+}
+
+div.sequencer-scroller-container {
+  width: 937px;
+  overflow-x: scroll;
+  float: left;
+  position: relative;
+}
+
+div.sequencer-labels {
+  border-bottom: 10px solid #777;
+  float: left;
+}
+
+div.time-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-left: 1px solid #F00;
+  width: 1px;
+  height: 527px;
+}
+
+div.sequencer-scroller {
+  min-width: 7680px;
+
+  thead td {
+    color: #AAA;
+    font-size: 12px;
+    position: relative;
+    top: 1px;
+    left: 5px;
+  }
+}
+
+table.sequencer {
+  background-color: #FFF;
+  font-family: 'Lato';
+  font-size: 14px;
+  float: left;
+
+  tr {
+    border-bottom: 1px solid #DDD;
+  }
+
+  th, td {
+    height: 30px;
+    position: relative;
+  }
+
+  th {
+    font-weight: 400;
+    text-align: left;
+    padding: 0 10px;
+    width: 100px;
+    text-overflow: ellipsis;
+    border-right: 1px double #CCC;
+  }
+
+  td {
+    width: 20px;
+    border-right: 1px solid #DDD;
+  }
+
+  a.tick {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    background-color: #369;
+    display: block;
+    width: 14px;
+    height: 24px;
+    margin: 2px;
+    outline: 1px solid #369;
+    border: 1px solid #5d86ae;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten(#369, 10%);
+    }
+
+    &.selected {
+      border: 1px solid #FFF;
+      background-color: #FFD500;
+    }
+  }
+}

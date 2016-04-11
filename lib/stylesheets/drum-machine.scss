@@ -1,0 +1,198 @@
+div.pad-box,
+ul.library {
+  padding: 10px 0 0 10px;
+  width: 540px;
+  border: 1px solid #3a3a3a;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  background-color: #2a2a2a;
+}
+
+ul.pads {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+
+  li {
+    display: block;
+    float: left;
+    width: 125px;
+    height: 129px;
+    margin: 0 10px 6px 0;
+    background-color: #666;
+    border-radius: 0 0 2px 2px;
+    outline: 0;
+  }
+
+  li a {
+    background-color: #FC0;
+    display: block;
+    height: 125px;
+    width: 125px;
+    transition: background-color 200ms ease-out;
+    border-radius: 2px;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #ff6000;
+    font-size: 12px;
+    height: 105px;
+    width: 105px;
+    padding: 10px;
+    box-shadow: 0 0 20px #222;
+    cursor: pointer;
+  }
+
+  li a.inactive {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  li a:hover {
+    background-color: #ffd800;
+  }
+
+  li:active a,
+  li.active a {
+    background-color: #F60;
+    color: #cc5200;
+    box-shadow: none;
+  }
+
+  li.active,
+  li:active {
+    height: 125px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+ul.library {
+  float: right;
+  list-style: none;
+  height: 544px;
+  width: 490px;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+
+ul.library li {
+  margin-bottom: 10px;
+  height: 30px;
+  vertical-align: top;
+}
+
+ul.library li div.light {
+  height: 5px;
+  width: 10px;
+  display: inline-block;
+  background-color: #F00;
+  box-shadow: inset 0 0 5px #870000;
+  border: 1px solid #FC0808;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+ul.library li div.light.active {
+  background-color: #ace600;
+  box-shadow: inset 0 0 5px #668900;
+  border: 1px solid #B2D83F;
+}
+
+ul.library input.sample-url,
+ul.library input.sample-name {
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  border: 0;
+  background-color: #B4E1E5;
+  transition: background-color 200ms ease-in;
+}
+
+ul.library input.sample-name {
+  background-color: transparent;
+  color: #FFF;
+}
+
+ul.library input.sample-url {
+  font: 12px 'Lato';
+}
+
+ul.library input.sample-url:focus,
+ul.library input.sample-name:focus {
+  background-color: #FFF;
+  color: #333;
+}
+
+ul.library input.sample-name {
+  width: 100px;
+  margin-right: 5px;
+}
+
+ul.library input.sample-url {
+  width: 275px;
+}
+
+ul.library input:focus {
+  outline: 0;
+}
+
+ul.library a.open-ended {
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  background-color: #222;
+  vertical-align: bottom;
+  color: #FFF;
+  position: relative;
+  margin-right: 10px;
+}
+
+ul.library span.line {
+  position: absolute;
+  top: 14px;
+  left: 8px;
+  height: 1px;
+  width: 10px;
+  background-color: #444;
+  transition: background-color 200ms linear;
+}
+
+ul.library span.arrow {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  transform: rotate(-45deg);
+  display: block;
+  height: 4px;
+  width: 4px;
+  border-right: 1px solid #444;
+  border-bottom: 1px solid #444;
+  transition: border-color 200ms linear;
+}
+
+ul.library span.barrier {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: block;
+  background-color: #444;
+  width: 1px;
+  height: 13px;
+  transition: background-color 200ms linear;
+}
+
+ul.library a.open-ended.active span.line,
+ul.library a.open-ended.active span.barrier,
+ul.library a.open-ended:hover span.line,
+ul.library a.open-ended:hover span.barrier {
+  background-color: #999;
+}
+
+ul.library a.open-ended.active span.arrow,
+ul.library a.open-ended:hover span.arrow {
+  border-color: #999;
+}

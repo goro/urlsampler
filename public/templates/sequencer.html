@@ -1,0 +1,58 @@
+<div class="box">
+  <header>
+    <ng-include src="'templates/shared/header.html'"></ng-include>
+  </header>
+  <div class="clear"></div>
+  <div class="sequencer-container">
+    <div class="sequencer-labels">
+      <table class="sequencer">
+        <thead>
+          <tr>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="sample in ctrl.samples track by $index">
+            <th>{{ sample.name }}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sequencer-scroller-container">
+      <time-line></time-line>
+      <div class="sequencer-scroller">
+        <table class="sequencer">
+          <thead>
+            <tr>
+              <td colspan="10">0:00</td>
+              <td colspan="10"></td>
+              <td colspan="10">0:05</td>
+              <td colspan="10"></td>
+              <td colspan="10">0:10</td>
+              <td colspan="10"></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="sample in ctrl.samples">
+              <td>
+                <sequencer-note ng-repeat="note in ctrl.composition.getAllNotesBySample(sample)" note="note"></sequencer-note>
+              </td>
+              <td ng-repeat="cell in ctrl.range(58) track by $index"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div ng-class="{ active: ctrl.composition.selectedNote }" ng-if="true === false" class="note-editor">
+      <label>
+        Start (ms):
+        <input disabled="true" type="text" ng-model="ctrl.composition.selectedNote.timestamp" class="short" />
+      </label>
+      <label>
+        End (ms):
+        <input disabled="true" type="text" ng-model="ctrl.composition.selectedNote.endTimestamp" class="short" />
+      </label>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>

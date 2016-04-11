@@ -1,0 +1,59 @@
+nav.drum-machine-element {
+  position: absolute;
+  top: 0;
+  left: 468px;
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  padding: 5px 10px;
+  height: 22px;
+
+  label {
+    color: #FFF;
+    margin-right: 16px;
+    position: relative;
+    top: -9px;
+    font-size: 10px;
+  }
+
+  a {
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    cursor: pointer;
+
+    span {
+      background-color: #666;
+      transition: background-color 200ms ease-in;
+    }
+
+    &:hover span, &.selected span {
+      background-color: #FFF;
+    }
+  }
+
+  a.pads {
+    margin-right: 14px;
+
+    span {
+      display: block;
+      float: left;
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      margin-right: 2px;
+      margin-bottom: 2px;
+    }
+  }
+
+  a.sequencer {
+
+    span {
+      display: block;
+      height: 4px;
+      width: 22px;
+      margin-bottom: 2px;
+    }
+  }
+}

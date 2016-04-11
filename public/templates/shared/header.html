@@ -1,0 +1,41 @@
+<header>
+  <h1>URLSampler</h1>
+  <nav class="drum-machine-element">
+    <label>View:</label>
+    <a ui-sref="drum-machine" ng-click="navSelected = 'drumMachine'" ui-sref-active="selected" title="Pad view" class="pads">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <a ui-sref="sequencer" ng-click="navSelected = 'sequencer'" ui-sref-active="selected" title="Sequencer view" class="sequencer">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </nav>
+  <ul class="controller">
+    <li>
+      <a ng-class="{ active: ctrl.player.currentStatus() === 'Recording' }" ng-click="ctrl.player.record()" class="record-button">
+        <span class="button-inner">
+          <span class="text">REC</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a ng-class="{ active: ctrl.player.currentStatus() === 'Playing' }" ng-click="ctrl.player.play()" class="play-button">
+        <span class="button-inner">
+          <span class="icon"></span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a ng-click="ctrl.player.stop()" class="stop-button">
+        <span class="button-inner">
+          <span class="icon"></span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</header>

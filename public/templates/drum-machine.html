@@ -1,0 +1,13 @@
+<div class="box">
+  <ng-include src="'templates/shared/header.html'"></ng-include>
+  <ul class="library">
+    <sample ng-repeat="sample in ctrl.samples" sample="sample"></sample>
+  </ul>
+  <div class="pad-box">
+    <ul class="pads">
+      <drum-pad ng-repeat="sample in ctrl.samples track by $index" sample="sample" ng-keydown="pressedKey($event)" tabIndex="{{ $index }}"></drum-pad>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
